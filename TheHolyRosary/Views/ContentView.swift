@@ -8,11 +8,30 @@
 import SwiftUI
 
 struct ContentView: View {
-    @StateObject var holyRosaryViewModel = HolyRosaryViewModel()
+    
     
     var body: some View {
-        VStack {
-            TabHomeView().preferredColorScheme(.light)
+        TabView {
+            HomeView()
+                .tabItem {
+                    Image (systemName: "house")
+                    Text("Home")
+                }
+            DaysView()
+                .tabItem {
+                    Image (systemName: "cross")
+                    Text("Days")
+                }
+            MysteriesView()
+                .tabItem {
+                    Image (systemName: "moon.circle")
+                    Text("Mysteries")
+                }
+            MoreView()
+                .tabItem {
+                    Image (systemName: "ellipsis")
+                    Text("More")
+                }
         }
     }
     

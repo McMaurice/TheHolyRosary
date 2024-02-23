@@ -9,7 +9,9 @@ import SwiftUI
 
 struct DaysView: View {
     var body: some View {
-        Text("Days")
+        VStack {
+            CustomShape()
+        }
     }
 }
 

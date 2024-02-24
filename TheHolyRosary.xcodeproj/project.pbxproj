@@ -21,6 +21,7 @@
 		EA93A5E22B86B6C000DF9843 /* HomeButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93A5E12B86B6C000DF9843 /* HomeButtonsView.swift */; };
 		EA93A5E42B86C6FF00DF9843 /* TopPicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93A5E32B86C6FF00DF9843 /* TopPicView.swift */; };
 		EA96667C2B88EEE5000B8D94 /* PrayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA96667B2B88EEE5000B8D94 /* PrayerViewModel.swift */; };
+		EA96E6C62B8A6D7A00DF16D5 /* NavLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA96E6C52B8A6D7A00DF16D5 /* NavLabelView.swift */; };
 		EA9803FD2B84DFF300EC8EC9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9803FC2B84DFF300EC8EC9 /* HomeView.swift */; };
 		EA9804012B84E08F00EC8EC9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9804002B84E08F00EC8EC9 /* ContentView.swift */; };
 		EA98040C2B84EC3A00EC8EC9 /* DaysView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA98040B2B84EC3A00EC8EC9 /* DaysView.swift */; };
@@ -45,6 +46,7 @@
 		EA93A5E12B86B6C000DF9843 /* HomeButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonsView.swift; sourceTree = "<group>"; };
 		EA93A5E32B86C6FF00DF9843 /* TopPicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicView.swift; sourceTree = "<group>"; };
 		EA96667B2B88EEE5000B8D94 /* PrayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerViewModel.swift; sourceTree = "<group>"; };
+		EA96E6C52B8A6D7A00DF16D5 /* NavLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavLabelView.swift; sourceTree = "<group>"; };
 		EA9803FC2B84DFF300EC8EC9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		EA9804002B84E08F00EC8EC9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		EA98040B2B84EC3A00EC8EC9 /* DaysView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DaysView.swift; sourceTree = "<group>"; };
@@ -159,6 +161,7 @@
 			isa = PBXGroup;
 			children = (
 				EA98040B2B84EC3A00EC8EC9 /* DaysView.swift */,
+				EA96E6C52B8A6D7A00DF16D5 /* NavLabelView.swift */,
 			);
 			path = DaysViews;
 			sourceTree = "<group>";
@@ -267,6 +270,7 @@
 				EAAB77C62B8670EF008E2026 /* CustomShape.swift in Sources */,
 				EA93A5E42B86C6FF00DF9843 /* TopPicView.swift in Sources */,
 				EA9329A02B83B6450042FA55 /* TheHolyRosaryApp.swift in Sources */,
+				EA96E6C62B8A6D7A00DF16D5 /* NavLabelView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

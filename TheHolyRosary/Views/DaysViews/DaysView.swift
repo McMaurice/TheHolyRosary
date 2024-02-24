@@ -9,23 +9,26 @@ import SwiftUI
 
 struct DaysView: View {
     @State private var numOfRows = 150.0
+    let days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
     
-    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
-
     var body: some View {
         let columns = [
             GridItem(.adaptive(minimum: numOfRows))
         ]
         NavigationStack {
-            LazyVGrid(columns: columns) {
-                ForEach(days, id: \.self) { day in
-                    NavigationLink {
-                        //
-                    } label: {
-                        Text(day)
+            ScrollView {
+                LazyVGrid(columns: columns, spacing: 20) {
+                    ForEach(days, id: \.self) { day in
+                        NavigationLink {
+                            //
+                        } label: {
+                            NavLabelView(day: day)
+                        }
                     }
                 }
+                .padding([.horizontal, .bottom])
             }
+            .navigationTitle("Weekday Devotions")
         }
     }
 }
@@ -35,3 +38,4 @@ struct DaysView_Previews: PreviewProvider {
         DaysView()
     }
 }
+

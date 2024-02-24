@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EA50EB682B89547400D5B196 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA50EB672B89547400D5B196 /* LaunchScreen.storyboard */; };
+		EA50EB6A2B89724400D5B196 /* YesterdayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50EB692B89724400D5B196 /* YesterdayButtonView.swift */; };
+		EA50EB6C2B89725B00D5B196 /* TomorrowButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA50EB6B2B89725B00D5B196 /* TomorrowButtonView.swift */; };
 		EA9329A02B83B6450042FA55 /* TheHolyRosaryApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93299F2B83B6450042FA55 /* TheHolyRosaryApp.swift */; };
 		EA9329A42B83B6470042FA55 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9329A32B83B6470042FA55 /* Assets.xcassets */; };
 		EA9329A72B83B6470042FA55 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EA9329A62B83B6470042FA55 /* Preview Assets.xcassets */; };
@@ -27,6 +30,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EA50EB672B89547400D5B196 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		EA50EB692B89724400D5B196 /* YesterdayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YesterdayButtonView.swift; sourceTree = "<group>"; };
+		EA50EB6B2B89725B00D5B196 /* TomorrowButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TomorrowButtonView.swift; sourceTree = "<group>"; };
 		EA93299C2B83B6450042FA55 /* TheHolyRosary.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheHolyRosary.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EA93299F2B83B6450042FA55 /* TheHolyRosaryApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheHolyRosaryApp.swift; sourceTree = "<group>"; };
 		EA9329A32B83B6470042FA55 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -58,6 +64,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		EA9224A82B8A2744008AB5C1 /* HomeButtonsView */ = {
+			isa = PBXGroup;
+			children = (
+				EA50EB6B2B89725B00D5B196 /* TomorrowButtonView.swift */,
+				EA50EB692B89724400D5B196 /* YesterdayButtonView.swift */,
+				EA93A5DD2B86940E00DF9843 /* PrayButtonView.swift */,
+				EA93A5E12B86B6C000DF9843 /* HomeButtonsView.swift */,
+			);
+			path = HomeButtonsView;
+			sourceTree = "<group>";
+		};
 		EA9329932B83B6450042FA55 = {
 			isa = PBXGroup;
 			children = (
@@ -108,6 +125,7 @@
 		EA9329B62B83CD120042FA55 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				EA50EB672B89547400D5B196 /* LaunchScreen.storyboard */,
 				EA9804002B84E08F00EC8EC9 /* ContentView.swift */,
 				EA9804072B84E8B100EC8EC9 /* HomeViews */,
 				EA9804082B84E8FA00EC8EC9 /* DaysViews */,
@@ -129,10 +147,9 @@
 		EA9804072B84E8B100EC8EC9 /* HomeViews */ = {
 			isa = PBXGroup;
 			children = (
+				EA9224A82B8A2744008AB5C1 /* HomeButtonsView */,
 				EA9803FC2B84DFF300EC8EC9 /* HomeView.swift */,
 				EAAB77C52B8670EF008E2026 /* CustomShape.swift */,
-				EA93A5DD2B86940E00DF9843 /* PrayButtonView.swift */,
-				EA93A5E12B86B6C000DF9843 /* HomeButtonsView.swift */,
 				EA93A5E32B86C6FF00DF9843 /* TopPicView.swift */,
 			);
 			path = HomeViews;
@@ -220,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EA50EB682B89547400D5B196 /* LaunchScreen.storyboard in Resources */,
 				EA9329A72B83B6470042FA55 /* Preview Assets.xcassets in Resources */,
 				EA9329A42B83B6470042FA55 /* Assets.xcassets in Resources */,
 			);
@@ -235,8 +253,10 @@
 				EA9329B02B83B9510042FA55 /* RosaryViewModel.swift in Sources */,
 				EA9329B42B83CA030042FA55 /* NetworkManager.swift in Sources */,
 				EA93A5DE2B86940E00DF9843 /* PrayButtonView.swift in Sources */,
+				EA50EB6C2B89725B00D5B196 /* TomorrowButtonView.swift in Sources */,
 				EA96667C2B88EEE5000B8D94 /* PrayerViewModel.swift in Sources */,
 				EA98040E2B84EC5500EC8EC9 /* MysteriesView.swift in Sources */,
+				EA50EB6A2B89724400D5B196 /* YesterdayButtonView.swift in Sources */,
 				EA9804102B84EC6300EC8EC9 /* MoreView.swift in Sources */,
 				EA9329AE2B83B6C10042FA55 /* RosaryModel.swift in Sources */,
 				EA93A5E22B86B6C000DF9843 /* HomeButtonsView.swift in Sources */,
@@ -378,9 +398,11 @@
 				DEVELOPMENT_TEAM = Q25PGH827A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "The Holy Rosary";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -407,9 +429,11 @@
 				DEVELOPMENT_TEAM = Q25PGH827A;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "The Holy Rosary";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

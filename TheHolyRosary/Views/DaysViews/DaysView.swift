@@ -8,9 +8,24 @@
 import SwiftUI
 
 struct DaysView: View {
+    @State private var numOfRows = 150.0
+    
+    let days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+
     var body: some View {
-        VStack {
-            CustomShape()
+        let columns = [
+            GridItem(.adaptive(minimum: numOfRows))
+        ]
+        NavigationStack {
+            LazyVGrid(columns: columns) {
+                ForEach(days, id: \.self) { day in
+                    NavigationLink {
+                        //
+                    } label: {
+                        Text(day)
+                    }
+                }
+            }
         }
     }
 }

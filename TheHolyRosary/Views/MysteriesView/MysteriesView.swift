@@ -9,7 +9,11 @@ import SwiftUI
 
 struct MysteriesView: View {
     var body: some View {
-        Text("Mystries")
+        NavigationStack {
+            NavigationLink(destination: CustomShape()) {
+                Text("Tap")
+            }
+        }
     }
 }
 

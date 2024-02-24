@@ -13,7 +13,7 @@ struct CustomShape: Shape {
 
         // Calculate the size and position of the rectangle
         let rectangleWidth = rect.width * 0.97
-        let rectangleHeight = rect.height * 2
+        let rectangleHeight = rect.height * 2.2
         let rectangleX = (rect.width - rectangleWidth) / 2
         let rectangleY = (rect.height - rectangleHeight) / 2
 
@@ -22,7 +22,7 @@ struct CustomShape: Shape {
         path.addRoundedRect(in: rectangleRect, cornerSize: CGSize(width: 30, height: 30))
 
         // Calculate the size and position of the circle
-        let circleDiameter = rect.width * 0.7
+        let circleDiameter = rect.width * 0.75
         let circleY = rectangleY - (circleDiameter - rectangleHeight) / 2
 
         // Add circle

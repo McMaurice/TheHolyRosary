@@ -26,6 +26,7 @@ struct TopPicView: View {
                 .foregroundColor(Color(color3))
                 .shadow(color: .black, radius: 10, x: 6, y: 5)
         }
+        .offset(y: -50)
     }
 }
 

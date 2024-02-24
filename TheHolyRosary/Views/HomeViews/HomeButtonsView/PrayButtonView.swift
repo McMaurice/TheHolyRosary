@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct PrayButtonView: View {
+    
     var body: some View {
-        Button {
-       
+        NavigationLink {
+            MysteriesView()
         } label: {
             VStack {
                 ZStack {

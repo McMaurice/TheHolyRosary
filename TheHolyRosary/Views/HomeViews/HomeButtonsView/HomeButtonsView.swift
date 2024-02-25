@@ -8,16 +8,13 @@
 import SwiftUI
 
 struct HomeButtonsView: View {
-    @StateObject var rosaryViewModel = RosaryViewModel()
-    @State var showYesterday: Bool = false
-    @State var showTomorrow: Bool = false
-    
-    let color2 = #colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1)
+    @EnvironmentObject var rosaryViewModel: RosaryViewModel
+    @EnvironmentObject var propertiesViewModel: PropertiesViewModel
     
     var body: some View {
         HStack(spacing: 40) {
-            YesterdayButtonView(rosaryViewModel: rosaryViewModel, showYesterday: $showYesterday, showTomorrow: $showTomorrow)
-            TomorrowButtonView(rosaryViewModel: rosaryViewModel, showTomorrow: $showTomorrow, showYesterday: $showYesterday)
+            YesterdayButtonView()
+            TomorrowButtonView()
         }
         .onAppear {
             rosaryViewModel.fetchTomorrowsRosary()
@@ -25,7 +22,7 @@ struct HomeButtonsView: View {
         }
         .foregroundColor(.white)
         .padding(.bottom)
-        if showTomorrow {
+        if propertiesViewModel.showTomorrow {
             ZStack {
                 RoundedRectangle(cornerRadius: 50)
                     .background(.ultraThinMaterial)
@@ -57,7 +54,7 @@ struct HomeButtonsView: View {
                 }
             }
         
-        if showYesterday {
+        if propertiesViewModel.showYesterday {
             ZStack {
                 RoundedRectangle(cornerRadius: 50)
                     .background(.ultraThinMaterial)
@@ -95,5 +92,7 @@ struct HomeButtonsView: View {
 struct HomeButtonsView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(PropertiesViewModel())
+            .environmentObject(RosaryViewModel())
     }
 }

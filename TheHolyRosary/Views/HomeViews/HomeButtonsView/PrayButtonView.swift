@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct PrayButtonView: View {
+    @EnvironmentObject var propertiesViewModel: PropertiesViewModel
     
     var body: some View {
         NavigationLink {
-            MysteriesView()
+            MoreView()
         } label: {
             VStack {
                 ZStack {
@@ -33,18 +34,25 @@ struct PrayButtonView: View {
                                 .font(.headline)
                                 .fontWeight(.bold)
                             }
-                            .foregroundColor(.black)
                         )
                 }
                 .padding(.top)
+                .foregroundColor(.black)
+                .padding(.horizontal, propertiesViewModel.animatePrayerButton ? 30 : 20)
+                .scaleEffect(propertiesViewModel.animatePrayerButton ? 1.1 : 1.0)
+                .offset(y: propertiesViewModel.animatePrayerButton ? -7 : 0)
             }
 
+        }
+        .onAppear {
+            propertiesViewModel.prayerButtonAnimation()
         }
     }
 }
 
 struct PrayButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        PrayButtonView()
+            .environmentObject(PropertiesViewModel())
     }
 }

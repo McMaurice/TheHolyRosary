@@ -20,6 +20,8 @@
 		EA93A5DE2B86940E00DF9843 /* PrayButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93A5DD2B86940E00DF9843 /* PrayButtonView.swift */; };
 		EA93A5E22B86B6C000DF9843 /* HomeButtonsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93A5E12B86B6C000DF9843 /* HomeButtonsView.swift */; };
 		EA93A5E42B86C6FF00DF9843 /* TopPicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93A5E32B86C6FF00DF9843 /* TopPicView.swift */; };
+		EA93BD9E2B8B9B65008CD3DB /* PropertiesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93BD9D2B8B9B65008CD3DB /* PropertiesViewModel.swift */; };
+		EA93BDA42B8BB73A008CD3DB /* GlobalConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA93BDA32B8BB73A008CD3DB /* GlobalConstants.swift */; };
 		EA96667C2B88EEE5000B8D94 /* PrayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA96667B2B88EEE5000B8D94 /* PrayerViewModel.swift */; };
 		EA96E6C62B8A6D7A00DF16D5 /* NavLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA96E6C52B8A6D7A00DF16D5 /* NavLabelView.swift */; };
 		EA9803FD2B84DFF300EC8EC9 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA9803FC2B84DFF300EC8EC9 /* HomeView.swift */; };
@@ -45,6 +47,8 @@
 		EA93A5DD2B86940E00DF9843 /* PrayButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayButtonView.swift; sourceTree = "<group>"; };
 		EA93A5E12B86B6C000DF9843 /* HomeButtonsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonsView.swift; sourceTree = "<group>"; };
 		EA93A5E32B86C6FF00DF9843 /* TopPicView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPicView.swift; sourceTree = "<group>"; };
+		EA93BD9D2B8B9B65008CD3DB /* PropertiesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertiesViewModel.swift; sourceTree = "<group>"; };
+		EA93BDA32B8BB73A008CD3DB /* GlobalConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlobalConstants.swift; sourceTree = "<group>"; };
 		EA96667B2B88EEE5000B8D94 /* PrayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrayerViewModel.swift; sourceTree = "<group>"; };
 		EA96E6C52B8A6D7A00DF16D5 /* NavLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavLabelView.swift; sourceTree = "<group>"; };
 		EA9803FC2B84DFF300EC8EC9 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -98,6 +102,7 @@
 			children = (
 				EA93299F2B83B6450042FA55 /* TheHolyRosaryApp.swift */,
 				EA9329B32B83CA030042FA55 /* NetworkManager.swift */,
+				EA93BDA32B8BB73A008CD3DB /* GlobalConstants.swift */,
 				EA9329B52B83CCED0042FA55 /* Model */,
 				EA9329B62B83CD120042FA55 /* Views */,
 				EA9329B72B83CD570042FA55 /* ViewModels */,
@@ -142,6 +147,7 @@
 			children = (
 				EA9329AF2B83B9510042FA55 /* RosaryViewModel.swift */,
 				EA96667B2B88EEE5000B8D94 /* PrayerViewModel.swift */,
+				EA93BD9D2B8B9B65008CD3DB /* PropertiesViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -257,7 +263,9 @@
 				EA9329B42B83CA030042FA55 /* NetworkManager.swift in Sources */,
 				EA93A5DE2B86940E00DF9843 /* PrayButtonView.swift in Sources */,
 				EA50EB6C2B89725B00D5B196 /* TomorrowButtonView.swift in Sources */,
+				EA93BDA42B8BB73A008CD3DB /* GlobalConstants.swift in Sources */,
 				EA96667C2B88EEE5000B8D94 /* PrayerViewModel.swift in Sources */,
+				EA93BD9E2B8B9B65008CD3DB /* PropertiesViewModel.swift in Sources */,
 				EA98040E2B84EC5500EC8EC9 /* MysteriesView.swift in Sources */,
 				EA50EB6A2B89724400D5B196 /* YesterdayButtonView.swift in Sources */,
 				EA9804102B84EC6300EC8EC9 /* MoreView.swift in Sources */,
@@ -407,8 +415,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -438,8 +446,8 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen.storyboard;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

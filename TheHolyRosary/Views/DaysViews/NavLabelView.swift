@@ -8,11 +8,10 @@
 import SwiftUI
 
 struct NavLabelView: View {
+    @EnvironmentObject var propertiesViewModel: PropertiesViewModel
     let day: String
     
     var body: some View {
-        let color = #colorLiteral(red: 0.5810584426, green: 0.1285524964, blue: 0.5745313764, alpha: 1)
-
         VStack {
             Image("\(day)")
                 .resizable()
@@ -24,15 +23,15 @@ struct NavLabelView: View {
                 .font(.headline)
                 .padding(.vertical)
                 .frame(maxWidth: .infinity)
-                .background(Color(color))
+                .background(secondaryAccentColor)
             
         }
         .clipShape(RoundedRectangle(cornerRadius: 10))
         .overlay(
             RoundedRectangle(cornerRadius: 10)
-                .stroke(Color(color))
+                .stroke(secondaryAccentColor)
         )
-        .shadow(radius: 10)
+        .shadow(color: .black.opacity(2.0), radius: 5, x: 3, y: 5)
     }
 }
 
@@ -40,5 +39,6 @@ struct NavLabelView: View {
 struct NavLabelView_Previews: PreviewProvider {
     static var previews: some View {
         NavLabelView(day: "sunday")
+            .environmentObject(PropertiesViewModel())
     }
 }

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct DaysView: View {
+    @EnvironmentObject var propertiesViewModel: PropertiesViewModel
     @State private var numOfRows = 150.0
     let days = ["sunday", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday"]
     
@@ -36,6 +37,7 @@ struct DaysView: View {
 struct DaysView_Previews: PreviewProvider {
     static var previews: some View {
         DaysView()
+            .environmentObject(PropertiesViewModel())
     }
 }
 

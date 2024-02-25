@@ -8,16 +8,14 @@
 import SwiftUI
 
 struct TomorrowButtonView: View {
-    @ObservedObject var rosaryViewModel: RosaryViewModel
-    @Binding var showTomorrow: Bool
-    @Binding var showYesterday: Bool
-    let color = #colorLiteral(red: 0.5810584426, green: 0.1285524964, blue: 0.5745313764, alpha: 1)
+    @EnvironmentObject var rosaryViewModel: RosaryViewModel
+    @EnvironmentObject var propertiesViewModel: PropertiesViewModel
     
     var body: some View {
         VStack {
             Button {
-                showTomorrow.toggle()
-                showYesterday = false
+                propertiesViewModel.showTomorrow.toggle()
+                propertiesViewModel.showYesterday = false
             } label: {
                 VStack(spacing: 5) {
                     Image(systemName: "chevron.right")
@@ -32,9 +30,9 @@ struct TomorrowButtonView: View {
                 }
                 .frame(width: 135, height: 60)
                 .padding()
-                .background(Color(color))
+                .background(secondaryAccentColor)
                 .cornerRadius(15)
-                .shadow(radius: 5, x: 6, y: 5)
+                .shadow(color: .black, radius: 10, x: 3, y: 5)
             }
         }
     }
@@ -43,5 +41,7 @@ struct TomorrowButtonView: View {
 struct TomorrowButtonView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(PropertiesViewModel())
+            .environmentObject(RosaryViewModel())
     }
 }

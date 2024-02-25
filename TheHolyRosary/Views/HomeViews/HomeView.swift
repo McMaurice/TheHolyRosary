@@ -8,9 +8,8 @@
 import SwiftUI
 
 struct HomeView: View {
-    @StateObject var rosaryViewModel = RosaryViewModel()
-    
-    let color2 = #colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1)
+    @EnvironmentObject var rosaryViewModel: RosaryViewModel
+    @EnvironmentObject var propertiesViewModel: PropertiesViewModel
     
     var body: some View {
         NavigationStack {
@@ -18,9 +17,9 @@ struct HomeView: View {
                 TopPicView()
                 ZStack {
                     CustomShape()
-                        .foregroundColor(Color(color2))
+                        .foregroundColor(Color.accentColor)
                         .padding(.bottom, 1)
-                        .shadow(color: .gray, radius: 5, x: 6, y: 5)
+                        .shadow(color: .black, radius: 10, x: 3, y: 5)
                     
                     VStack(spacing: 8)  {
                         if let today = rosaryViewModel.todaysModel.first {
@@ -68,5 +67,7 @@ struct HomeView: View {
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView()
+            .environmentObject(PropertiesViewModel())
+            .environmentObject(RosaryViewModel())
     }
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct TopPicView: View {
-    let color3 = #colorLiteral(red: 0.01680417731, green: 0.1983509958, blue: 1, alpha: 1)
+    @EnvironmentObject var propertiesViewModel: PropertiesViewModel
     
     var body: some View {
         ZStack {
@@ -23,7 +23,7 @@ struct TopPicView: View {
                 .opacity(0.6)
                 .frame(width: 500, height: 500, alignment: .topLeading)
                 .offset(y: -180)
-                .foregroundColor(Color(color3))
+                .foregroundColor(Color.accentColor)
                 .shadow(color: .black, radius: 10, x: 6, y: 5)
         }
         .offset(y: -50)
@@ -33,5 +33,6 @@ struct TopPicView: View {
 struct TopPicView_Previews: PreviewProvider {
     static var previews: some View {
         TopPicView()
+            .environmentObject(PropertiesViewModel())
     }
 }
